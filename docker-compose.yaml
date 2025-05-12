@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  pyboard-main:
+    image: jinwookchei43/pyboard-main:first
+    ports:
+      - "5000:5000"
+    depends_on:
+      - pyboard-spam
+
+  pyboard-spam:
+    image: jinwookchei43/pyboard-spam:first
+    ports:
+      - "5001:5001"
