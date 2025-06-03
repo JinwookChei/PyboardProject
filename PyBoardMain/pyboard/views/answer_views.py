@@ -21,8 +21,8 @@ def create(question_id):
         # 스팸체크 서버로 요청 보내기
         try:
             spam_check_response = requests.post(
-                'http://pyboard-spam-service:5001/check'
                 #'http://pyboard-spam:5001/check',
+                'http://pyboard-spam-service:5001/check',
                 #'http://localhost:5001/check',
                 json={'content': content},
                 timeout=3  # 타임아웃도 걸어주는 게 좋아요
