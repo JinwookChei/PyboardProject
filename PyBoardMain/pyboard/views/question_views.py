@@ -34,7 +34,8 @@ def create():
         content = form.content.data
         try:
             spam_check_response = requests.post(
-                'http://pyboard-spam:5001/check',  # 스팸 체크 서버 URL
+                #'http://pyboard-spam:5001/check',  # 스팸 체크 서버 URL
+                'http://pyboard-spam-service:5001/check',
                 #'http://localhost:5001/check',
                 json={'content': title + ' ' + content},  # 제목과 내용 결합하여 체크
                 timeout=3  # 타임아웃 설정
